@@ -3,33 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic</title>
-    <style>
-        .container {
-            display: flex;
-            /* flex-direction: row|column; */
-            gap: 10px;
-            align-items: center;
-            /* flex-start, flex-end */
-            justify-content: center;
-            /* space-between, space-around */
-            margin: auto;
-            width: 1000px;
-            height: 500px;
-            background: silver;
-        }
-        .box {
-            width: 200px;
-            height: 200px;
-            background: deeppink;
-        }
-    </style>
+    <title>Hello JS</title>
 </head>
 <body>
-    <div class="container">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </div>
+    <script>
+        let data = [
+            { name: "Alice", age: 22 },
+            { name: "Bob", age: 19 },
+            { name: "Chris", age:18 },
+            { name: "Dave", age: 20 },
+            { name: "Eve", age: 23 },
+        ];
+
+        let names = data.map(user => user.name);
+        let u20 = data.filter(user => user.age <= 20);
+        let result = data
+            .filter(user => user.age <= 20)
+            .map(user => user.name);
+    </script>
 </body>
 </html>
