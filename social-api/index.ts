@@ -1,6 +1,8 @@
 import express from "express";
-
 const app = express();
+
+import { router as postsRouter } from "./routes/posts";
+app.use(postsRouter);
 
 app.get("/", (req, res) => {
     res.json({ msg: "Social API up and running..." });
